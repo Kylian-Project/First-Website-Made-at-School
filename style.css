@@ -1,0 +1,141 @@
+*  /*mise en forme de la page en general*/
+{
+    margin: 0px;
+    padding: 0px;
+}                
+
+.background
+{
+  background-image: url("img/tech.jpg"); /*image ajoutée*/
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: -1; /*mettre en arriere plan*/
+}
+
+nav li
+{
+    float: left;
+    width: 16.666%;
+    text-align: center;
+    font-size: 2.2vw;
+    list-style: none; /*retirer les points de liste*/
+}
+
+nav a 
+{
+    display: block;
+    text-decoration: none;
+    color: orange;
+    border-bottom: 3px solid transparent; /*Eviter un décalage de la tipographie*/
+    padding: 10px 0px;
+    background-color: #747274;
+}
+
+nav a:hover
+{
+    border-bottom: 3px solid #ff1d9d; /*ajoute une bordure jaune quand la souris survole un menu*/
+}
+
+a
+{
+	font-family: Trebuchet MS;
+}
+
+.titre
+{
+	display: inline;
+	color: black;
+	font-family: Trebuchet MS;
+	font-size: 7vw;
+  position: relative;
+  top: 2vw;
+	/*text-decoration: underline #C3C3C3;*/
+	text-shadow:0 0 2px #fff,0 0 30px #fff,0px 0px 5px #fff;color:#353435; /*effet de lueur sur le texte*/
+}
+
+.titre:hover
+{
+    cursor: crosshair; /* change le curseur avant sélection*/
+    color: #ff1d9d;
+}
+
+#v1
+{
+  position: relative;
+  display: inline-block;
+  top: 10vw;
+  right: 20vw;
+}
+
+#v2
+{
+  position: relative;
+  display: inline-block;
+  top: 10vw;
+  left: 20vw;
+}
+
+.button
+{
+    display: inline-block;
+    background-color: #747274;
+    font-size: 3vw;
+    text-align: center;
+    padding: 5px;
+    min-width: 6em;
+    border-radius: 10px;
+    font-family: Trebuchet MS;
+    color: orange;
+    text-decoration: none;
+    position: relative;
+    border: 4px solid transparent;
+}
+
+.button:hover
+{
+    border: 4px solid #ff1d9d;
+}
+
+.qcm {
+    padding: 1rem 0;
+    display: table;
+    margin: 0 auto;
+    position: absolute; /*Positioner le bouton*/
+    bottom: 3%;
+    left: 3%;
+}
+
+.jeu {
+    padding: 1rem 0;
+    display: table;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+
+.inno
+{
+	position: relative;
+	top: 30px;
+  	width: 40%;
+  	border: 4px solid #353435;
+}
+
+.inno:hover
+{
+	border: 4px solid #ff1d9d;
+}
+
+footer
+{
+  position: fixed; /*fixer le texte sur la page, ne bouge pas même si la page descent*/
+  bottom: 1%;
+  right: 1%;
+  color: white;
+  font-family: Trebuchet MS;
+}

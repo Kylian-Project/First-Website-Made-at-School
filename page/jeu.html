@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style2.css" type="text/css">
+	<link rel="icon" href="../img/ico/jeu.ico"/>
+	<title>Jeu</title>
+
+	<script>
+	var index = "0";
+	var end = "0";
+
+	function Check(a, b, c, d){
+		if (document.jeu.zone1.value > a){
+			alert("Trop grand !");
+		}
+		else if (document.jeu.zone1.value < a){
+			alert("Trop petit !");
+		}
+		else if (d == "1"){
+			alert("Bravo, tu as tout fini ^^");
+			document.location.href ="../index.html";
+		}
+		else {
+			alert("Bien joué, au suivant !");
+			index ++;
+			document.getElementById(b).textContent = c;
+		}
+	}
+	function traitement(){
+		var name = "gameTitle", text, rep;
+		if (index == "0"){
+			rep = "2009";
+			text = "Quelle est l'année la plus significative pour l'apparition d'internet ?";
+			Check(rep, name, text, end);
+		}
+		else if (index == "1"){
+			rep = "1989";
+			text = "Quelle est l'année d'apparition du premier ordinateur portable ?";
+			Check(rep, name, text, end);
+		}
+		else if (index == "2"){
+			rep = "1981";
+			text = "En quelle année les premières monnaies virtuelles ont vu le jour ?";
+			Check(rep, name, text, end);
+		}
+		else if (index == "3"){
+			rep = "1999";
+			text = "En quelle année est apparue le premier moteur de recherche ?";
+			Check(rep, name, text, end);
+		}
+		else if (index == "4"){
+			rep = "1994"
+			end = "1"  //pour terminer le jeu
+			Check(rep, name, text, end);
+		}
+		else{
+			index = "0"  //ne sert pas a grand chose, c'est juste au cas ou index n'est pas égal à 
+			end = "0"	//ne sert pas a grand chose, c'est juste au cas ou
+		}
+	}
+	</script>
+</head>
+<body>
+	<img class='background'>
+	<center>
+		<div class="accueil">
+ 			<p><a class="button" href="../index.html">Accueil</a></p>
+		</div>
+		<br>
+		<form name="jeu">
+			<label id="gameTitle" class="cadre">En quelle année la loi Hadopi a été prononcé ?</label><br>
+			<div>
+				<input type="number" name="zone1" value="1948" min="1948" max="2050">
+				<span class="validity"></span>
+				<a class="submit" onclick="traitement()">Valider</a><br>
+				<a href="http://informatique-lycee-baumont.alwaysdata.net/" target="_blank"><img src="../img/nsi.png" class="picture"></a>
+			</div>
+		</form>
+	</center>
+	<footer>
+ 		Kylian & Mathéo & Gabin 1°3 Copyright ©
+ 	</footer>
+</body>
+</html>

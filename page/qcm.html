@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style2.css" type="text/css">
+	<link rel="icon" href="../img/ico/qcm.ico"/>
+	<title>QCM</title>
+
+	<script>
+		function traitement(){
+			if (
+				(ordinateur.check1.checked) == true && (ordinateur.check2.checked) == false && (ordinateur.check3.checked) == false &&
+				(monnaie.check1.checked) == false && (monnaie.check2.checked) == false && (monnaie.check3.checked) == true &&
+				(recherche.check1.checked) == false && (recherche.check2.checked) == true && (recherche.check3.checked) == false
+				)
+				{
+					alert(`Bien joué, c'est les bonnes réponses !`);
+					score=3; //et non "score=score+3" car sinon les points peuvent s'ajouter à l'infini a chaque fois que quelqu'un appuye sur le bouton "Valider"
+					document.getElementById('resultat').innerHTML='Score : '+score+'';
+				}
+			else
+				{
+					alert('Désolé, continuez à chercher :/');
+				}
+		}
+	</script>
+</head>
+<body>
+	<img class='background'>
+	<center>
+		<div class="accueil">
+ 			<p><a class="button" href="../index.html">Accueil</a></p>
+		</div>
+	</center>
+
+	<script>
+		var score=0;
+	</script>
+	<div class="question">
+	<div class="qcm">
+		<h3>Qui a inventé l'ordinateur portable en 1981 ?</h3>
+
+		<form name="ordinateur">
+			<input type="checkbox" name="check1" value="1"> Adam Osborne<br>
+			<input type="checkbox" name="check2" value="2"> Jacques Arsaq<br>
+			<input type="checkbox" name="check3" value="3"> Mme Beaudeux<br>
+		</form>
+	</div>
+
+	<div class="qcm">
+		<h3>Qui a inventé la monnaie virtiuelle ?</h3>
+
+		<form name="monnaie">
+			<input type="checkbox" name="check1" value="1"> Bill Atkinson<br>
+			<input type="checkbox" name="check2" value="2"> George Antheil<br>
+			<input type="checkbox" name="check3" value="3"> Satoshi Nakamoto<br>
+		</form>
+	</div>
+
+	<div class="qcm">
+		<h3>Qui a inventé le premier moteur de recherche ?</h3>
+
+		<form name="recherche">
+			<input type="checkbox" name="check1" value="1"> Jean Reymond Abrial<br>
+			<input type="checkbox" name="check2" value="2"> Alan Emtage<br>
+			<input type="checkbox" name="check3" value="3"> Alan turning<br>
+		</form>
+	</div>
+	</div>
+
+	<center>
+		<br><input type="button" name="but" value="Valider" class="qcmbutton" onclick="traitement()">
+	</center>
+
+	<br><span id="resultat">Score : 0</span>
+
+	<footer>
+ 		Kylian & Mathéo & Gabin 1°3 Copyright ©
+ 	</footer>
+</body>
+</html>
